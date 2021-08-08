@@ -1,0 +1,191 @@
+%%%% preamble
+
+\title{Resume}
+\author{Scott Mangiapane}
+\date{August 2021}
+
+%%%% setup
+
+\documentclass[12pt]{article}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{paracol}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[left=2cm,right=2cm,top=1.8cm,bottom=1.8cm]{geometry}
+\usepackage[pdfusetitle]{hyperref}
+\usepackage[sfdefault,condensed]{roboto}
+
+\definecolor{black}{rgb}{0, 0, 0}
+\definecolor{blue}{rgb}{0.13, 0.47, 0.81}
+\definecolor{gray}{rgb}{0.4, 0.4, 0.4}
+
+%%%% macros
+
+\newcommand{\Chapter}[1]{
+    \begingroup
+    \color{black}\Huge\bfseries\centering
+    #1
+    \par
+    \vspace{1mm plus .25mm minus .25mm}
+    \endgroup
+}
+\newcommand{\Section}[1]{
+    \begingroup
+    \color{blue}\Large\bfseries
+    \vspace{4mm plus .5mm minus .5mm}
+    #1
+    \par
+    \vspace{4mm plus .5mm minus .5mm}
+    \endgroup
+}
+\newcommand{\Subsection}[1]{
+    \begingroup
+    \color{black}\normalsize\bfseries
+    #1
+    \par
+    \vspace{1mm plus .25mm minus .25mm}
+    \endgroup
+}
+\newcommand{\Subsubsection}[2]{
+    \begingroup
+    \color{black}\normalsize\itshape
+    #1\hfill#2
+    \par
+    \vspace{1mm plus .25mm minus .25mm}
+    \endgroup
+}
+\newcommand{\Content}[1]{
+    #1
+    \par
+    \vspace{2mm plus .5mm minus .5mm}
+}
+\newcommand{\InlineBold}[1]{
+    \begingroup
+    \color{black}\bfseries
+    #1
+    \endgroup
+}
+
+%%%% document
+
+\begin{document}
+\color{gray}
+\columnratio{0.65}
+\pagestyle{empty}
+\raggedright
+\setlength{\columnsep}{32pt}
+\setlength{\multicolsep}{0pt}
+\setlist[itemize]{leftmargin=*,nosep}
+
+\Chapter{Scott Mangiapane}
+\begin{center}
+    \begin{multicols}{2}
+        \begin{flushright}
+            example.com\par
+            github.com/example\par
+        \end{flushright}
+        \begin{flushleft}
+            \InlineBold{(555) 555-5555}\par
+            \InlineBold{myname@example.com}\par
+        \end{flushleft}
+    \end{multicols}
+\end{center}
+
+\begin{paracol}{2}
+
+    \Section{Experience}
+    \Subsection{Example Company}
+    \Subsubsection{Senior Software Development Engineer}{2021 - Present}
+    \Content{
+        \begin{itemize}
+            \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            \item Amet justo donec enim diam. Dolor morbi non arcu risus quis varius. Eu sem integer vitae justo.
+            \item Dui ut ornare lectus sit amet est placerat. Sem et tortor consequat id porta nibh.
+            \item Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Imperdiet proin fermentum leo vel orci porta non.
+            \item Ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit.
+        \end{itemize}
+    }
+    \Subsubsection{Software Development Engineer}{2019 - 2021}
+    \Content{
+        \begin{itemize}
+            \item Tortor at auctor urna nunc id cursus.
+            \item Scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis. Est lorem ipsum dolor sit.
+            \item Mauris sit amet massa vitae. Ultrices tincidunt arcu non sodales neque sodales ut etiam sit.
+            \item Amet purus gravida quis blandit turpis cursus.
+            \item Orci sagittis eu volutpat odio facilisis mauris sit.
+            \item Varius vel pharetra vel turpis nunc eget lorem dolor sed. Convallis posuere morbi leo urna molestie at elementum.
+        \end{itemize}
+    }
+    \Subsection{Another Company}
+    \Subsubsection{Software Development Intern}{Summers 2017 - 2018}
+    \Content{
+        \begin{itemize}
+            \item Pellentesque habitant morbi tristique senectus.
+            \item Ut porttitor leo a diam. Sit amet mattis vulputate enim nulla.
+            \item Interdum velit euismod in pellentesque massa. Enim facilisis gravida neque convallis a cras semper auctor.
+            \item Amet massa vitae tortor condimentum lacinia. Neque convallis a cras semper auctor neque vitae tempus.
+        \end{itemize}
+    }
+
+    \Section{Education}
+    \Subsection{Example University}
+    \Subsubsection{Bachelor of Science in Computer Science}{2015 - 2019}
+    \Content{Ac turpis egestas integer eget aliquet nibh. Felis donec et odio pellentesque diam volutpat commodo sed egestas.}
+
+    \switchcolumn
+
+    \Section{Skills}
+    \begingroup
+    \setlength{\columnsep}{4pt}
+    \Subsection{Languages}
+    \vspace{-8pt} % workaround for spacing issue with multicol inside of paracol
+    \Content{
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item Java
+                \item SQL
+                \item JavaScript
+                \item Node.js
+            \end{itemize}
+        \end{multicols}
+    }
+    \Subsection{Tools / Frameworks}
+    \vspace{-8pt} % workaround for spacing issue with multicol inside of paracol
+    \Content{
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item React
+                \item Vue.js
+                \item Express.js
+                \item Docker
+                \item GNU / Linux
+                \item Git
+                \item CICD / Jenkins
+                \item Android SDK
+            \end{itemize}
+        \end{multicols}
+    }
+    \Subsection{Miscellaneous}
+    \vspace{-8pt} % workaround for spacing issue with multicol inside of paracol
+    \Content{
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item Scrum
+                \item HTML / CSS
+            \end{itemize}
+        \end{multicols}
+    }
+    \endgroup
+
+    \Section{Side Projects}
+    \Subsection{Example 1}
+    \Content{Nunc faucibus a pellentesque sit amet porttitor eget. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Tempor id eu nisl nunc mi ipsum faucibus vitae aliquet.}
+    \Subsection{Example 2}
+    \Content{Eu non diam phasellus vestibulum lorem sed risus ultricies. Nunc lobortis mattis aliquam faucibus purus. Dignissim suspendisse in est ante in nibh. At imperdiet dui accumsan sit amet.}
+    \Subsection{Example 3}
+    \Content{Vehicula ipsum a arcu cursus vitae congue mauris. Egestas maecenas pharetra convallis posuere morbi leo. Cras pulvinar mattis nunc sed blandit libero volutpat sed. Vel eros donec ac odio tempor orci dapibus. Non blandit massa enim nec.}
+
+\end{paracol}
+\end{document}
