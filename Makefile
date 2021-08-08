@@ -1,6 +1,8 @@
 default:
-	pdflatex resume.tex
+	mkdir build
+	pdflatex -output-directory=build resume.tex
 
 clean:
 	rm -f *.aux *.fdb_latexmk *.fls *.log *.out *.pdf *.synctex.gz
+	rm -rf build
 
